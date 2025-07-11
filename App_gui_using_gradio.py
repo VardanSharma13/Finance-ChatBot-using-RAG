@@ -1,6 +1,9 @@
 # Now making the UI
 # We will use gradio to provide the chat UI
 
+import os
+os.environ['HF_HOME'] = "./hf_cache"
+
 
 from RAG_pipline_using_LangChain import conversation_chain
 

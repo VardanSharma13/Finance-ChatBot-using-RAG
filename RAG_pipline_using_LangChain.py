@@ -1,5 +1,8 @@
 ## Now we will create the RAG Pipeline using `Langchain`
 
+import os
+os.environ['HF_HOME'] = "./hf_cache"
+
 
 from create_retreiver import retreiver
 from LLM_for_RAG_pipeline import chat_model

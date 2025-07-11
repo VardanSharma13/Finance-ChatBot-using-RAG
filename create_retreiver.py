@@ -3,6 +3,9 @@
 
 # https://python.langchain.com/docs/integrations/retrievers/self_query/chroma_self_query/
 
+import os
+os.environ['HF_HOME'] = "./hf_cache"
+
 
 from load_vector_store import vector_database_db
 

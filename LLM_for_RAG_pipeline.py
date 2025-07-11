@@ -5,6 +5,8 @@
 # - https://python.langchain.com/docs/how_to/
 # - https://python.langchain.com/docs/how_to/#qa-with-rag
 
+import os
+os.environ['HF_HOME'] = "./hf_cache"
 
 from huggingface_hub import login
 login("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")
