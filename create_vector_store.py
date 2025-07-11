@@ -1,17 +1,4 @@
 
-#  IMPORTS
-# Models and Dataset dependencies
-!pip install transformers datasets accelerate bitsandbytes fsspec==2023.9.2
-# Langchain Dependencies
-!pip install langchain langchain-community langchain-text-splitters langchain-huggingface langchain-core
-# Other Dependencies
-!pip install chromadb unstructured gradio
-
-
-
-
-
-
 import os
 os.environ['HF_HOME'] = "./hf_cache"
 
@@ -20,14 +7,14 @@ from datasets import load_dataset
 
 ds = load_dataset("alvanlii/finance-textbooks")
 
-ds
+#ds
 
-print(ds['train']['book_title'][0])
+#print(ds['train']['book_title'][0])
 
 
-for row in ds['train']:
-  print(row)
-  break
+# for row in ds['train']:
+#   print(row)
+#   break
 
 from tqdm import tqdm
 
@@ -43,7 +30,7 @@ def save_books_with_title(ds, base_path):
       f.write(book_text)
 
 
-!mkdir books
+#!mkdir books
 
 save_books_with_title(ds, './books')
 
@@ -98,13 +85,14 @@ chunked_docs = text_splitter.split_documents(docs)
 
 print(len(chunked_docs))
 
+print("...........................SUCCESS 1 UNTILL NOW.....................................")
+
 
 #Embedding Model
 
 embedding_model_name = "intfloat/multilingual-e5-large-instruct"
 
 hf_embeddings_model = HuggingFaceEmbeddings(model_name=embedding_model_name)
-
 
 
 # ## Create Vector Database
@@ -120,6 +108,8 @@ vector_store_data_path = "chroma_data"
 
 print("Starting")
 start_time = time.time()
+
+print("...........................SUCCESS 2 UNTILL NOW.....................................")
 
 vectorstore = Chroma.from_documents(
     chunked_docs , hf_embeddings_model, persist_directory= vector_store_data_path,

@@ -3,6 +3,9 @@
 
 # https://python.langchain.com/docs/integrations/retrievers/self_query/chroma_self_query/
 
+
+from load_vector_store import vector_database_db
+
 retreiver = vector_database_db.as_retriever(k=4)
 
 for ret_doc in retreiver.invoke("What are stocks?"):

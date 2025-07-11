@@ -1,0 +1,15 @@
+
+#  IMPORTS
+# Models and Dataset dependencies
+        !pip install transformers datasets accelerate bitsandbytes fsspec==2023.9.2
+        {pip install sentence-transformers}
+# Langchain Dependencies
+        !pip install langchain langchain-community langchain-text-splitters langchain-huggingface langchain-core
+# Other Dependencies
+        !pip install chromadb unstructured gradio
+    
+        !mkdir books
+
+
+NOTE----> "!COMMAND"  is  format to run terminal commands in google-collab
+          use----> "COMMAND" directly in terminal
