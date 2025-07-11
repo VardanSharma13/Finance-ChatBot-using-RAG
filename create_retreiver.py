@@ -11,8 +11,8 @@ from load_vector_store import vector_database_db
 
 retreiver = vector_database_db.as_retriever(k=4)
 
-for ret_doc in retreiver.invoke("What are stocks?"):
-  print("*"*50)
-  print(ret_doc)
-  print("*"*50)
-  break
+# for ret_doc in retreiver.invoke("What are stocks?"):
+#   print("*"*50)
+#   print(ret_doc)
+#   print("*"*50)
+#   break
