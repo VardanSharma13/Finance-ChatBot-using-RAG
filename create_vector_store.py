@@ -85,7 +85,7 @@ chunked_docs = text_splitter.split_documents(docs)
 
 print(len(chunked_docs))
 
-print("...........................SUCCESS 1 UNTILL NOW.....................................")
+print(".......................... DATA-PRE-PROCESSING COMPLETED .....................................")
 
 
 #Embedding Model
@@ -109,7 +109,6 @@ vector_store_data_path = "chroma_data"
 print("Starting")
 start_time = time.time()
 
-print("...........................SUCCESS 2 UNTILL NOW.....................................")
 
 vectorstore = Chroma.from_documents(
     chunked_docs , hf_embeddings_model, persist_directory= vector_store_data_path,
