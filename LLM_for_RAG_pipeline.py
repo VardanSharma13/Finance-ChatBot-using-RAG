@@ -7,7 +7,7 @@
 
 
 from huggingface_hub import login
-login("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")
+#login("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")
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextStreamer, BitsAndBytesConfig
 import torch
