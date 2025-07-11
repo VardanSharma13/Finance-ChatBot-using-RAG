@@ -9,7 +9,6 @@ import os
 os.environ['HF_HOME'] = "./hf_cache"
 
 from huggingface_hub import login
-login("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")
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextStreamer, BitsAndBytesConfig
 import torch
